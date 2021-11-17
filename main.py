@@ -1,4 +1,6 @@
 import json
+import random
+import time
 from linebot import LineBotApi
 from linebot.models import TextSendMessage
 
@@ -10,7 +12,10 @@ line_bot_api = LineBotApi(CHANNELACCESSTOKEN)
 
 def main():
     USERID = info["USERID"]
+    l = ["おきなさい","いつまで寝てるの？","遅刻するよー"]
     messages = TextSendMessage(text="おはよう")
+    time.sleep(600)
+    messages = TextSendMessage(text=random.choice(l))
     line_bot_api.push_message(USERID,messages=messages)
     
 if __name__=="__main__":
