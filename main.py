@@ -1,5 +1,6 @@
 import json
 import random
+import time
 from linebot import LineBotApi
 from linebot.models import TextSendMessage
 
@@ -14,6 +15,7 @@ def main():
     l = ["おきなさい","いつまで寝てるの？","遅刻するよー"]
     messages = TextSendMessage(text="おはよう")
     line_bot_api.push_message(USERID,messages=messages)
+    time.sleep(120)
     messages = TextSendMessage(text=random.choice(l))
     line_bot_api.push_message(USERID,messages=messages)
     
