@@ -12,8 +12,8 @@ line_bot_api = LineBotApi(CHANNELACCESSTOKEN)
 
 def main():
     USERID = info["USERID"]
-    l = ["おきなさい","いつまで寝てるの？","遅刻するよー"]
-    messages = TextSendMessage(text="おはよう")
+    l = ["おきなさい","いつまで寝てるの？","遅刻するわよ",]
+    messages = TextSendMessage(text="おはよ")
     line_bot_api.push_message(USERID,messages=messages)
     time.sleep(600)
     messages = TextSendMessage(text=random.choice(l))
