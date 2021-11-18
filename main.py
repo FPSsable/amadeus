@@ -14,7 +14,8 @@ def main():
     l = ["おきなさい","いつまで寝てるの？","遅刻するよー"]
     messages = TextSendMessage(text="おはよう")
     messages2 = TextSendMessage(text=random.choice(l))
-    line_bot_api.push_message(USERID,messages=messages,messages2=messages2)
+    line_bot_api.push_message(USERID,messages=messages)
+    line_bot_api.push_message(USERID,messages2=messages2)
     
 if __name__=="__main__":
     main()
