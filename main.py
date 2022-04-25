@@ -12,7 +12,7 @@ line_bot_api = LineBotApi(CHANNELACCESSTOKEN)
 
 def main():
     USERID = info["USERID"]
-    l = ["おきなさい","いつまで寝てるんや？","遅刻するで",]
+    l = ["おきなさい","いつまで寝てるのよ？","遅刻するよ",]
     messages = TextSendMessage(text="おはよ")
     line_bot_api.push_message(USERID,messages=messages)
     time.sleep(600)
